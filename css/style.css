@@ -1,7 +1,6 @@
 /* NBS AI Course Portal — Claude Palette */
 /* Warm beige, terracotta-orange, warm gray */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Fonts loaded via <link> in HTML */
 
 :root {
   --bg: #FAF6F1;
@@ -52,7 +51,7 @@ main{flex:1;padding:0 0 4rem}
 .hdr .w{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .logo{font-family:var(--font-d);font-size:1.15rem;color:var(--text);text-decoration:none;white-space:nowrap;display:flex;align-items:center}
 .logo:hover{color:var(--accent);text-decoration:none}
-.logo-img{height:32px;width:auto}
+.logo-img{height:64px;width:auto}
 nav a{font-size:.88rem;color:var(--text-2);margin-left:1.2rem;padding:.3rem .6rem;border-radius:6px;transition:all .2s;text-decoration:none}
 nav a:hover{color:var(--accent);background:var(--accent-l)}
 
