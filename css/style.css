@@ -22,7 +22,7 @@
   --r: 8px; --rl: 14px;
   --sh: 0 1px 3px rgba(45,43,40,.06);
   --shm: 0 4px 16px rgba(45,43,40,.08);
-  --mw: 820px;
+  --mw: 1080px;
 }
 
 /* === Reset === */
@@ -45,7 +45,7 @@ li{margin-bottom:.35em}
 /* === Layout === */
 .page{min-height:100vh;display:flex;flex-direction:column}
 .w{max-width:var(--mw);margin:0 auto;padding:0 1.5rem}
-main{flex:1;padding:2.5rem 0 4rem}
+main{flex:1;padding:0 0 4rem}
 
 /* === Header === */
 .hdr{background:rgba(255,255,255,.92);border-bottom:1px solid var(--border);padding:1.1rem 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);box-shadow:var(--sh)}
@@ -61,10 +61,12 @@ nav a:hover{color:var(--accent);background:var(--accent-l)}
 
 /* === Hero Bar (mockup style) === */
 .hero-bar{background:var(--bg-accent);padding:2.5rem 0;border-bottom:1px solid var(--border)}
-.hero-inner{display:flex;align-items:center;gap:2rem}
-.hero-photo{width:180px;height:140px;object-fit:cover;border-radius:var(--rl);box-shadow:var(--shm);flex-shrink:0}
+.hero-inner{display:flex;align-items:flex-start;gap:2rem;position:relative}
+.hero-photo{width:200px;height:155px;object-fit:cover;border-radius:var(--rl);box-shadow:var(--shm);flex-shrink:0}
+.hero-text{flex:1}
 .hero-text h1{font-size:2.2rem;margin-bottom:.3em}
 .hero-text .sub{font-size:1.02rem;color:var(--text-2);margin:0}
+.hero-cta{position:absolute;right:0;bottom:0}
 
 /* === 3-Column Grid === */
 .col-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:2.5rem;border:1px solid var(--border);border-radius:var(--rl);background:var(--bg-card);overflow:hidden}
@@ -137,6 +139,7 @@ pre code{background:none;padding:0}
   .hero-inner{flex-direction:column;text-align:center}
   .hero-photo{width:140px;height:110px}
   .hero-text h1{font-size:1.7rem}
+  .hero-cta{position:static;margin-top:1rem}
   .col-grid{grid-template-columns:1fr;border:none;gap:1.5rem;background:transparent}
   .col{border-right:none;border-bottom:1px solid var(--border);padding:1.2rem 0;background:var(--bg-card);border-radius:var(--rl);padding:1.2rem}
   .col:last-child{border-bottom:none}
