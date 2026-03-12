@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аналитика каталога — NBS AI Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="hdr">
+  <div class="w">
+    <a href="../index.html" class="logo"><img src="../img/NBS_logo.png" alt="NBS" class="logo-img"></a>
+    <nav>
+      <a href="../index.html">Задания</a>
+      <a href="../submit.html">Сдать работу</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="w">
+    <a href="../index.html" class="back">К списку заданий</a>
+
+    <div class="asg-hdr">
+      <span class="badge b-iw">Индивидуальная работа</span>
+      <h1>Аналитика продуктового каталога</h1>
+      <p style="color:var(--text-2);font-size:1.02rem;">Извлечение структурированных данных из PDF-каталога, построение аналитических таблиц, диаграмм и отчёта с помощью ИИ.</p>
+      <div class="tags">
+        <span class="tag">Дни 1–2 (пятница–суббота)</span>
+        <span class="tag">Индивидуально</span>
+        <span class="tag">3–4 часа</span>
+        <span class="tag">Подписка НЕ требуется</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Исходные материалы</h2>
+      <p>Все студенты работают с одним каталогом:</p>
+      <p><strong>Swagelok — Pipe Fittings</strong> (MS-01-147, Rev T, May 2022): адаптеры, колена, тройники, муфты, заглушки, переходники, крестовины, ниппели. 23 страницы, английский язык.</p>
+      <p><a href="Catalog.pdf" class="btn btn-outline" download>📄 Скачать каталог (PDF, 2.4 MB)</a></p>
+    </div>
+
+    <div class="section">
+      <h2>Инструменты</h2>
+      <ul>
+        <li><strong>ИИ-модель</strong> (любая): Claude, ChatGPT, Gemini, Copilot, Perplexity</li>
+        <li><strong>Таблицы:</strong> Google Sheets, Excel или ИИ-генерация</li>
+        <li><strong>Диаграммы:</strong> Google Sheets, Excel, Claude Artifacts, ChatGPT Canvas</li>
+        <li><strong>Отчёт:</strong> Word, Google Docs, Canva, ИИ</li>
+      </ul>
+    </div>
+
+    <div class="info">
+      <strong>Определение SKU:</strong> Допускаются два подхода. <strong>Подход A</strong> — базовые артикулы без учёта материала (~265 SKU). <strong>Подход B</strong> — каждый материальный вариант = отдельный SKU (~1850–1900 SKU). Зафиксируйте выбранный подход в отчёте.
+    </div>
+
+    <div class="section">
+      <h2>7 аналитических заданий</h2>
+
+      <h3>1. Иерархия категорий</h3>
+      <p>Извлечь полную структуру каталога: категория → подкатегория → количество SKU. Таблица с 3 уровнями вложенности.</p>
+
+      <h3>2. Матрица «Тип × Материал»</h3>
+      <p>Перекрёстная таблица: строки = типы фитингов, столбцы = 7 материалов, ячейки = количество позиций.</p>
+
+      <h3>3. Матрица «Тип × Размер»</h3>
+      <p>Распределение товаров по размерам резьбы (1/16"–1") внутри каждой категории. Выводы: какие размеры самые ходовые.</p>
+
+      <h3>4. Рейтинг категорий</h3>
+      <p>Рейтинг категорий по количеству SKU. Столбчатая диаграмма (bar chart) + комментарий: на чём фокусируется производитель.</p>
+
+      <h3>5. Анализ материалов</h3>
+      <p>Распределение материалов по категориям. Подсказка: материал определяется по префиксу артикула (SS-, S-, B-, 6Mo-, 625-, 825-, 2507-).</p>
+
+      <h3>6. Тепловая карта ассортимента</h3>
+      <p>Heatmap: строки = категории, столбцы = размеры, ячейки = количество SKU. Цветовое кодирование.</p>
+
+      <h3>7. «Белые пятна» ассортимента</h3>
+      <p>Выявить отсутствующие комбинации (тип × материал × размер × резьба). Минимум 5 «белых пятен» + для каждого гипотеза: почему нет и есть ли бизнес-потенциал.</p>
+      <div class="info tip">
+        <strong>Подсказки:</strong> Сравни доступность ISO/RT между категориями. Обрати внимание на Heavy-Wall (-10K) серию. Посмотри, все ли материалы доступны одинаково.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Формат сдачи</h2>
+      <h3>Маска имён файлов</h3>
+      <pre>Фамилия_CatalogAudit_ТипФайла.расширение</pre>
+      <p>Примеры: <code>Yegembayev_CatalogAudit_Report.pdf</code>, <code>Yegembayev_CatalogAudit_Tables.xlsx</code></p>
+
+      <h3>Обязательные файлы</h3>
+      <p><strong>Отчёт</strong> (<code>_Report.pdf</code>) — единый документ со всеми 7 заданиями: таблицы, диаграммы, комментарии + раздел «Рефлексия» (3–5 предложений).</p>
+      <p>Допустимые форматы: PDF (предпочтительно), DOCX, PPTX. Максимум 50 MB. Языки: русский, английский, казахский.</p>
+
+      <h3>Бонусный артефакт (+20% к оценке)</h3>
+      <p>Интерактивный дашборд или HTML-страница с визуализациями (минимум 3 из 7 заданий в интерактивном формате). Сдаётся как URL.</p>
+    </div>
+
+    <div class="section">
+      <h2>Критерии оценивания (100 баллов)</h2>
+      <table>
+        <thead>
+          <tr><th>Критерий</th><th>Баллы</th><th>Что проверяем</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Полнота извлечения данных</td><td>30</td><td>Все 7 заданий? Реальные данные из каталога? Иерархия полная?</td></tr>
+          <tr><td>Качество визуализаций</td><td>20</td><td>Диаграммы информативны? Подписи, легенды? Heatmap наглядная?</td></tr>
+          <tr><td>Аналитические выводы</td><td>20</td><td>Комментарии к каждому заданию? «Белые пятна» с гипотезой?</td></tr>
+          <tr><td>Точность данных</td><td>20</td><td>Выборочная проверка 5–10 позиций. Зафиксировано определение SKU?</td></tr>
+          <tr><td>Оформление и подача</td><td>10</td><td>Единый отчёт? Маска файлов? Рефлексия? Читаемо?</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Бонус:</strong> +20 баллов — интерактивный дашборд (мин. 3 задания в интерактиве).</p>
+    </div>
+
+    <div class="section">
+      <h2>Шкала оценок NARXOZ</h2>
+      <p>A (95–100), A- (90–94), B+ (85–89), B (80–84), B- (75–79), C+ (70–74), C (65–69), C- (60–64), D+ (55–59), D- (50–54), FX (25–49), F (0–24).</p>
+    </div>
+
+    <div class="info warn">
+      <strong>Защита от копипаста:</strong> Рефлексия обязательна. Мы выборочно сверяем 5–10 позиций с реальным каталогом. Порог расхождения >20% = снижение оценки. «Всё получилось с первого раза» = красный флаг.
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="../submit.html" class="btn btn-primary">Сдать работу →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="w">NARXOZ Business School · AI & Management Decisions · 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
