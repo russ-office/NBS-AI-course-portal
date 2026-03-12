@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контент-билдер — NBS AI Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="hdr">
+  <div class="w">
+    <a href="../index.html" class="logo"><img src="../img/NBS_logo.png" alt="NBS" class="logo-img"></a>
+    <nav>
+      <a href="../index.html">Задания</a>
+      <a href="../submit.html">Сдать работу</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="w">
+    <a href="../index.html" class="back">К списку заданий</a>
+
+    <div class="asg-hdr">
+      <span class="badge b-iw">Индивидуальная работа</span>
+      <h1>Контент-билдер: создание учебных материалов</h1>
+      <p style="color:var(--text-2);font-size:1.02rem;">Deep research по выбранной теме, сбор датасета и создание учебных продуктов в разных форматах с помощью ИИ-инструментов.</p>
+      <div class="tags">
+        <span class="tag">День 2 (суббота)</span>
+        <span class="tag">Индивидуально</span>
+        <span class="tag">4–6 часов</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Концепция</h2>
+      <p>Вы выбираете тему, проводите deep research, собираете датасет образовательных материалов (тексты + видео) и на их основе создаёте учебные продукты — минимум 3 из 5 предложенных форматов.</p>
+      <p>Основная цель — продемонстрировать способность находить, анализировать и трансформировать информацию в разные образовательные форматы с помощью ИИ-инструментов.</p>
+    </div>
+
+    <div class="section">
+      <h2>Выбор темы</h2>
+      <p>Тему вы выбираете самостоятельно. Примеры для ориентира:</p>
+      <ul>
+        <li>Основы управленческого учёта</li>
+        <li>Основы маркетинга</li>
+        <li>Будущее профессий и рынок труда</li>
+        <li>Любая тема из вашей профессиональной области</li>
+      </ul>
+      <p>Тема должна быть достаточно конкретной для создания учебного материала за ограниченное время. Слишком широкие темы («Менеджмент», «Экономика») не принимаются.</p>
+    </div>
+
+    <div class="section">
+      <h2>Инструменты</h2>
+      <ul>
+        <li><strong>NotebookLM</strong> (notebooklm.google.com) — сбор и анализ датасета, генерация подкастов</li>
+        <li><strong>Gamma</strong> (gamma.app) — создание презентаций и веб-страниц</li>
+        <li><strong>HeyGen</strong> (heygen.com) — создание видео с аватаром</li>
+        <li><strong>Gemini</strong> (gemini.google.com) — deep research, генерация тестов, flashcards, текстов</li>
+      </ul>
+      <p>Вы можете использовать дополнительные ИИ-инструменты по своему выбору.</p>
+    </div>
+
+    <div class="section">
+      <h2>Процесс работы</h2>
+
+      <h3>Шаг 1. Deep Research и датасет</h3>
+      <ul>
+        <li>Проведите исследование темы: Gemini, Perplexity, NotebookLM</li>
+        <li>Соберите минимум: 3–5 текстовых источников (статьи, отчёты) + 2–3 YouTube-видео</li>
+        <li>Загрузите источники в NotebookLM для анализа</li>
+        <li>Сформулируйте границы знаний: что именно вы будете учить, что оставляете за рамками</li>
+      </ul>
+
+      <h3>Шаг 2. Создание учебных продуктов</h3>
+      <p>Выберите <strong>минимум 3 из 5</strong> форматов и создайте их:</p>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Формат</th><th>Описание</th><th>Трудоёмкость</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Тесты для проверки знаний</td><td>10–15 вопросов (multiple choice, true/false, open)</td><td>Низкая</td></tr>
+          <tr><td>2</td><td>Flashcards для запоминания</td><td>15–20 карточек (термин → определение/объяснение)</td><td>Низкая</td></tr>
+          <tr><td>3</td><td>Презентация или веб-сайт</td><td>Мини-курс: 8–12 слайдов или лендинг</td><td>Средняя</td></tr>
+          <tr><td>4</td><td>Подкаст</td><td>Аудио 5–10 мин (NotebookLM или запись)</td><td>Средняя</td></tr>
+          <tr><td>5</td><td>Видео</td><td>3–5 мин обучающее видео (HeyGen, Loom, запись экрана)</td><td>Высокая</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info">
+        <strong>Важно:</strong> трудоёмкость форматов различается. Вы сами выбираете баланс между простыми и сложными форматами. Выбор более трудоёмких форматов (видео, подкаст) не даёт автоматически более высокую оценку — оценивается качество, а не сложность инструмента.
+      </div>
+
+      <h3>Шаг 3. Описание курса (PDF, 1–2 страницы)</h3>
+      <p>Подготовьте документ-описание своего учебного продукта:</p>
+      <ol>
+        <li><strong>Тема и границы знаний</strong> — что охватывает курс, для кого предназначен, что остаётся за рамками</li>
+        <li><strong>Датасет</strong> — список использованных источников (ссылки + 1 предложение описания каждого)</li>
+        <li><strong>Созданные продукты</strong> — перечень с кратким описанием каждого (формат, объём, инструмент)</li>
+        <li><strong>Ссылки на артефакты</strong> — URL на каждый созданный продукт (Gamma-сайт, Google Drive с видео, NotebookLM и т.д.)</li>
+        <li><strong>Рефлексия</strong> — 3–5 предложений: какие инструменты использовали, что сработало, что нет, что бы изменили</li>
+      </ol>
+      <p>Этот PDF — обязательный файл для загрузки в форму сдачи.</p>
+    </div>
+
+    <div class="section">
+      <h2>Формат сдачи</h2>
+      <h3>Маска имён файлов</h3>
+      <pre>Фамилия_ContentBuilder_ТипФайла.расширение</pre>
+      <p>Примеры: <code>Yegembayev_ContentBuilder_Description.pdf</code>, <code>Yegembayev_ContentBuilder_Tests.pdf</code></p>
+
+      <h3>Обязательные файлы</h3>
+      <p><strong>Описание курса</strong> (<code>_Description.pdf</code>) — 1–2 страницы: тема, границы, датасет, список продуктов, ссылки, рефлексия. Загружается в форму на портале.</p>
+
+      <h3>Артефакты (ссылки в PDF)</h3>
+      <p>Все созданные продукты предоставляются как веб-ссылки внутри PDF-описания:</p>
+      <ul>
+        <li>Тесты → Google Forms, Quizlet, или PDF</li>
+        <li>Flashcards → Quizlet, Anki, или PDF</li>
+        <li>Презентация/сайт → Gamma, Google Slides, или URL</li>
+        <li>Подкаст → NotebookLM ссылка, Google Drive, или SoundCloud</li>
+        <li>Видео → Google Drive, YouTube (unlisted), или Loom</li>
+      </ul>
+
+      <p>Допустимые языки: русский, английский или казахский. Другой язык — штраф (−5 баллов). Максимум 50 MB.</p>
+
+      <h3>Бонусные форматы</h3>
+      <ul>
+        <li>Создано 4 из 5 форматов → <strong>+5 баллов</strong></li>
+        <li>Создано все 5 форматов → <strong>+10 баллов</strong></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Критерии оценивания (100 баллов)</h2>
+      <table>
+        <thead>
+          <tr><th>Критерий</th><th>Баллы</th><th>Что проверяем</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Качество датасета</td><td>20</td><td>Минимум 3–5 текстов + 2–3 видео? Источники разнообразные и релевантные?</td></tr>
+          <tr><td>Качество учебных продуктов</td><td>35</td><td>Минимум 3 формата созданы? Содержание корректное и полезное?</td></tr>
+          <tr><td>Связность и границы</td><td>15</td><td>Тема определена чётко? Все продукты логически связаны?</td></tr>
+          <tr><td>Использование ИИ-инструментов</td><td>20</td><td>Какие инструменты и для чего? Осмысленный выбор? Рефлексия?</td></tr>
+          <tr><td>Оформление и подача</td><td>10</td><td>PDF-описание полное? Ссылки рабочие? Маска файлов?</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Бонусы (сверх 100):</strong> +5 за 4 формата, +10 за все 5 форматов.</p>
+    </div>
+
+    <div class="section">
+      <h2>Шкала оценок NARXOZ</h2>
+      <p>A (95–100), A- (90–94), B+ (85–89), B (80–84), B- (75–79), C+ (70–74), C (65–69), C- (60–64), D+ (55–59), D- (50–54), FX (25–49), F (0–24).</p>
+      <p>Бонусные баллы добавляются к итоговой сумме и могут поднять оценку выше 100.</p>
+    </div>
+
+    <div class="info warn">
+      <strong>Защита от копипаста:</strong> Датасет проверяется — если все источники с первой страницы Google по общему запросу, это маркер низкого качества. Тесты из 3 вопросов или flashcards без контекста не пройдут. «Всё было легко и быстро» в рефлексии = красный флаг. Все продукты должны быть по одной теме и логически связаны.
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="../submit.html" class="btn btn-primary">Сдать работу →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="w">property of Ruslan Yegembayev | 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
