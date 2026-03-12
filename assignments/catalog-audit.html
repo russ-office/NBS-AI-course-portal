@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аналитика каталога — NBS AI Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="hdr">
+  <div class="w">
+    <a href="../index.html" class="logo"><img src="../img/NBS_logo.png" alt="NBS" class="logo-img"></a>
+    <nav>
+      <a href="../index.html">Задания</a>
+      <a href="../submit.html">Сдать работу</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="w">
+    <a href="../index.html" class="back">К списку заданий</a>
+
+    <div class="asg-hdr">
+      <span class="badge b-iw">Индивидуальная работа</span>
+      <h1>Аналитика продуктового каталога</h1>
+      <p style="color:var(--text-2);font-size:1.02rem;">Извлечение структурированных данных из PDF-каталога мебельной фурнитуры, построение аналитических таблиц, диаграмм и отчёта с помощью ИИ.</p>
+      <div class="tags">
+        <span class="tag">Дни 1–2</span>
+        <span class="tag">Индивидуально</span>
+        <span class="tag">Часть практической оценки ВСК</span>
+        <span class="tag">Любая ИИ-модель</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Каталоги на выбор</h2>
+      <p>Выберите ОДИН каталог для анализа:</p>
+      <ul>
+        <li><strong>Вариант A — BOYARD</strong> (Katalog_FF_2024.pdf, ~340 стр.) — функциональная фурнитура: петли, направляющие, подъёмные механизмы, кухонное наполнение, опоры, замки, крепёж</li>
+        <li><strong>Вариант B — BRASS</strong> (brass-catalog-2026-web.pdf, ~300 стр.) — лицевая фурнитура: ручки, крючки, петли, опоры, полкодержатели, замки, аксессуары для ванной</li>
+      </ul>
+      <p>PDF-каталоги выдаются преподавателем в классе.</p>
+    </div>
+
+    <div class="section">
+      <h2>Инструменты</h2>
+      <p>Подписка НЕ требуется. Можно использовать любую ИИ-модель: Claude, ChatGPT, Gemini, Copilot, Perplexity и др. Для таблиц и диаграмм — Google Sheets, Excel или ИИ-генерация.</p>
+    </div>
+
+    <div class="section">
+      <h2>7 аналитических задач (все обязательные)</h2>
+      <ol>
+        <li><strong>Иерархия категорий</strong> — полная структура каталога: категория → подкатегория → количество SKU</li>
+        <li><strong>Матрица «Тип × Цвет»</strong> — перекрёстная таблица: типы товаров × цвета/покрытия → количество позиций</li>
+        <li><strong>Матрица «Тип × Размер»</strong> — распределение товаров по типоразмерам внутри категорий</li>
+        <li><strong>Рейтинг категорий</strong> — столбчатая диаграмма: категории по количеству SKU + комментарий</li>
+        <li><strong>Анализ материалов</strong> — из каких материалов сделана фурнитура, распределение по категориям</li>
+        <li><strong>Тепловая карта ассортимента</strong> — heatmap: категории × параметр (цвет/размер/материал) → интенсивность</li>
+        <li><strong>«Белые пятна»</strong> — отсутствующие комбинации (тип × цвет × размер) + гипотеза: почему и есть ли бизнес-потенциал</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Формат сдачи</h2>
+      <ol>
+        <li><strong>Отчёт</strong> (<code>Фамилия_CatalogAudit_Report.pdf</code>) — единый документ со всеми 7 заданиями: таблицы, диаграммы, комментарии + раздел «Рефлексия»</li>
+      </ol>
+      <p>Допустимые форматы: PDF (предпочтительно), DOCX, PPTX. Максимум 50 MB.</p>
+
+      <div class="info tip">
+        <strong>Бонус +20%:</strong> Создайте интерактивный дашборд или HTML-страницу с визуализациями (минимум 3 из 7 заданий в интерактивном формате). Сдайте как URL через поле «Бонусный артефакт» в форме.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Рефлексия (обязательный раздел отчёта)</h2>
+      <p>3–5 предложений: какой ИИ использовали, какие промпты давали, где ИИ ошибался, как проверяли точность данных.</p>
+    </div>
+
+    <div class="section">
+      <h2>Критерии оценивания (100 баллов)</h2>
+      <table>
+        <thead>
+          <tr><th>Критерий</th><th>Баллы</th><th>Что проверяем</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Полнота извлечения данных</td><td>30</td><td>Все 7 заданий выполнены? Таблицы содержат реальные данные? Иерархия полная?</td></tr>
+          <tr><td>Качество визуализаций</td><td>20</td><td>Диаграммы информативны? Правильный тип графика? Подписи, легенды?</td></tr>
+          <tr><td>Аналитические выводы</td><td>20</td><td>Комментарии к каждому заданию? Выводы осмысленные? «Белые пятна» с гипотезой?</td></tr>
+          <tr><td>Точность данных</td><td>20</td><td>Выборочная сверка 5–10 позиций с реальным каталогом</td></tr>
+          <tr><td>Оформление и подача</td><td>10</td><td>Единый отчёт, маска файлов, рефлексия, читаемость</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Шкала оценок NARXOZ</h2>
+      <p>A (95–100), A- (90–94), B+ (85–89), B (80–84), B- (75–79), C+ (70–74), C (65–69), C- (60–64), D+ (55–59), D- (50–54), FX (25–49), F (0–24).</p>
+      <p>Бонусные баллы (+20 за дашборд) добавляются к сумме и могут поднять оценку выше 100.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="../submit.html" class="btn btn-primary">Сдать работу →</a>
+      <a href="../index.html" class="btn btn-outline" style="margin-left:.7rem;">← К заданиям</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="w">NARXOZ Business School · AI & Management Decisions · 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
