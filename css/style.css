@@ -1,0 +1,136 @@
+/* NBS AI Course Portal — Claude Palette */
+/* Warm beige, terracotta-orange, warm gray */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #FAF6F1;
+  --bg-card: #FFFFFF;
+  --bg-accent: #F5EDE4;
+  --bg-code: #F0E9DF;
+  --text: #2D2B28;
+  --text-2: #6B6560;
+  --text-3: #9B9590;
+  --accent: #D4714E;
+  --accent-h: #C0613E;
+  --accent-l: #F5DDD2;
+  --border: #E5DDD4;
+  --border-l: #EDE7DF;
+  --font-d: 'DM Serif Display', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+  --font-m: 'JetBrains Mono', monospace;
+  --r: 8px; --rl: 14px;
+  --sh: 0 1px 3px rgba(45,43,40,.06);
+  --shm: 0 4px 16px rgba(45,43,40,.08);
+  --mw: 820px;
+}
+
+/* === Reset === */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-b);color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* === Type === */
+h1,h2,h3{font-family:var(--font-d);font-weight:400;line-height:1.25;color:var(--text)}
+h1{font-size:2.2rem;margin-bottom:.5em}
+h2{font-size:1.5rem;margin:1.8em 0 .6em}
+h3{font-size:1.15rem;margin:1.4em 0 .4em}
+p{margin-bottom:1em}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent-h);text-decoration:underline}
+strong{font-weight:600}
+ul,ol{margin:0 0 1em 1.3em}
+li{margin-bottom:.35em}
+
+/* === Layout === */
+.page{min-height:100vh;display:flex;flex-direction:column}
+.w{max-width:var(--mw);margin:0 auto;padding:0 1.5rem}
+main{flex:1;padding:2.5rem 0 4rem}
+
+/* === Header === */
+.hdr{background:rgba(255,255,255,.92);border-bottom:1px solid var(--border);padding:1.1rem 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);box-shadow:var(--sh)}
+.hdr .w{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:var(--font-d);font-size:1.15rem;color:var(--text);text-decoration:none;white-space:nowrap}
+.logo:hover{color:var(--accent);text-decoration:none}
+.logo .dot{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:6px;vertical-align:middle;position:relative;top:-1px}
+nav a{font-size:.88rem;color:var(--text-2);margin-left:1.2rem;padding:.3rem .6rem;border-radius:6px;transition:all .2s;text-decoration:none}
+nav a:hover{color:var(--accent);background:var(--accent-l)}
+
+/* === Footer === */
+.ftr{text-align:center;padding:2rem 0;font-size:.82rem;color:var(--text-3);border-top:1px solid var(--border-l)}
+
+/* === Hero === */
+.hero{text-align:center;padding:2rem 0 2.5rem}
+.hero h1{font-size:2.4rem;margin-bottom:.3em}
+.hero .sub{font-size:1.05rem;color:var(--text-2);max-width:540px;margin:0 auto}
+.dates{display:flex;justify-content:center;gap:1.2rem;margin-top:1.5rem;flex-wrap:wrap}
+.dbadge{display:inline-flex;align-items:center;gap:.5rem;background:var(--bg-accent);border:1px solid var(--border);border-radius:var(--r);padding:.45rem 1rem;font-size:.88rem;color:var(--text-2)}
+.dbadge .city{font-weight:600;color:var(--text)}
+
+/* === Cards === */
+.cards{display:grid;gap:1rem;margin:1.5rem 0}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rl);padding:1.4rem 1.5rem;transition:box-shadow .25s,border-color .25s,transform .25s;text-decoration:none;color:inherit;display:block}
+.card:hover{box-shadow:var(--shm);border-color:var(--accent-l);transform:translateY(-2px);text-decoration:none;color:inherit}
+.badge{display:inline-block;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.2em .7em;border-radius:4px;margin-bottom:.6rem}
+.b-cw{background:var(--accent-l);color:var(--accent)}
+.b-iw{background:#E2ECDF;color:#4A7040}
+.b-train{background:#DDE6F0;color:#3B5998}
+.b-soon{background:#F0ECE7;color:var(--text-3)}
+.card h3{font-family:var(--font-d);font-size:1.15rem;margin:0 0 .35rem}
+.card p{font-size:.9rem;color:var(--text-2);margin:0;line-height:1.5}
+.card .meta{font-size:.78rem;color:var(--text-3);margin-top:.6rem}
+
+/* === Assignment page === */
+.asg-hdr{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.asg-hdr h1{font-size:2rem;margin-bottom:.3em}
+.tags{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.7rem}
+.tag{font-size:.8rem;padding:.2em .7em;border-radius:4px;background:var(--bg-accent);color:var(--text-2)}
+.section{margin-bottom:2rem}
+.section h2{padding-bottom:.3em;border-bottom:2px solid var(--accent-l)}
+
+/* === Tables === */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+thead{background:var(--bg-accent)}
+th{text-align:left;font-weight:600;padding:.65rem .9rem;border-bottom:2px solid var(--border);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2)}
+td{padding:.65rem .9rem;border-bottom:1px solid var(--border-l);vertical-align:top}
+tr:last-child td{border-bottom:none}
+
+/* === Info boxes === */
+.info{background:var(--bg-accent);border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.92rem}
+.info.warn{background:#FFF8F0;border-left-color:#E6922E}
+.info.tip{background:#F0F5EE;border-left-color:#5A8A4A}
+
+/* === Code === */
+code{font-family:var(--font-m);font-size:.87em;background:var(--bg-code);padding:.15em .4em;border-radius:4px}
+pre{background:var(--bg-code);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;overflow-x:auto;font-size:.85rem;line-height:1.6;margin:1rem 0}
+pre code{background:none;padding:0}
+
+/* === Buttons === */
+.btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-b);font-size:.9rem;font-weight:600;padding:.6rem 1.3rem;border-radius:var(--r);border:none;cursor:pointer;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-h);color:#fff;text-decoration:none;transform:translateY(-1px);box-shadow:var(--shm)}
+.btn-outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn-outline:hover{background:var(--accent-l);text-decoration:none}
+
+/* === Submit page === */
+.submit-frame{width:100%;min-height:700px;border:1px solid var(--border);border-radius:var(--rl);margin:1.5rem 0}
+.placeholder-box{background:var(--bg-accent);border:2px dashed var(--border);border-radius:var(--rl);padding:3rem 2rem;text-align:center;margin:1.5rem 0}
+.placeholder-box p{color:var(--text-2);font-size:1rem;margin:0}
+
+/* === Back link === */
+.back{display:inline-flex;align-items:center;gap:.3rem;font-size:.88rem;color:var(--text-2);margin-bottom:1.5rem;text-decoration:none}
+.back:hover{color:var(--accent)}
+.back::before{content:'←';font-size:1.1em}
+
+/* === Responsive === */
+@media(max-width:640px){
+  h1{font-size:1.7rem}
+  .hero h1{font-size:1.85rem}
+  h2{font-size:1.25rem}
+  .hdr .w{flex-wrap:wrap}
+  nav a{margin-left:.6rem;font-size:.82rem}
+  table{font-size:.82rem}
+  th,td{padding:.5rem .6rem}
+  .card{padding:1.1rem 1.2rem}
+  .dates{flex-direction:column;align-items:center}
+}
