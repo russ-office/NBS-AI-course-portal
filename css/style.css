@@ -59,13 +59,23 @@ nav a:hover{color:var(--accent);background:var(--accent-l)}
 /* === Footer === */
 .ftr{text-align:center;padding:2rem 0;font-size:.82rem;color:var(--text-3);border-top:1px solid var(--border-l)}
 
-/* === Hero === */
-.hero{text-align:center;padding:2rem 0 2.5rem}
-.hero h1{font-size:2.4rem;margin-bottom:.3em}
-.hero .sub{font-size:1.05rem;color:var(--text-2);max-width:540px;margin:0 auto}
-.dates{display:flex;justify-content:center;gap:1.2rem;margin-top:1.5rem;flex-wrap:wrap}
-.dbadge{display:inline-flex;align-items:center;gap:.5rem;background:var(--bg-accent);border:1px solid var(--border);border-radius:var(--r);padding:.45rem 1rem;font-size:.88rem;color:var(--text-2)}
-.dbadge .city{font-weight:600;color:var(--text)}
+/* === Hero Bar (mockup style) === */
+.hero-bar{background:var(--bg-accent);padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.hero-inner{display:flex;align-items:center;gap:2rem}
+.hero-photo{width:180px;height:140px;object-fit:cover;border-radius:var(--rl);box-shadow:var(--shm);flex-shrink:0}
+.hero-text h1{font-size:2.2rem;margin-bottom:.3em}
+.hero-text .sub{font-size:1.02rem;color:var(--text-2);margin:0}
+
+/* === 3-Column Grid === */
+.col-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:2.5rem;border:1px solid var(--border);border-radius:var(--rl);background:var(--bg-card);overflow:hidden}
+.col{padding:1.5rem;border-right:1px solid var(--border)}
+.col:last-child{border-right:none}
+.col-head{margin-bottom:1.2rem}
+.col-head h2{font-size:1.25rem;margin:0 0 .3em}
+.col-weight{display:inline-block;font-size:.82rem;font-weight:600;padding:.15em .6em;border-radius:4px}
+.col-weight.accent{background:var(--accent-l);color:var(--accent)}
+.col-weight.muted{background:var(--bg-accent);color:var(--text-3)}
+.card-stack{display:flex;flex-direction:column;gap:.8rem}
 
 /* === Cards === */
 .cards{display:grid;gap:1rem;margin:1.5rem 0}
@@ -123,14 +133,18 @@ pre code{background:none;padding:0}
 .back::before{content:'←';font-size:1.1em}
 
 /* === Responsive === */
-@media(max-width:640px){
-  h1{font-size:1.7rem}
-  .hero h1{font-size:1.85rem}
+@media(max-width:768px){
+  .hero-inner{flex-direction:column;text-align:center}
+  .hero-photo{width:140px;height:110px}
+  .hero-text h1{font-size:1.7rem}
+  .col-grid{grid-template-columns:1fr;border:none;gap:1.5rem;background:transparent}
+  .col{border-right:none;border-bottom:1px solid var(--border);padding:1.2rem 0;background:var(--bg-card);border-radius:var(--rl);padding:1.2rem}
+  .col:last-child{border-bottom:none}
   h2{font-size:1.25rem}
   .hdr .w{flex-wrap:wrap}
   nav a{margin-left:.6rem;font-size:.82rem}
   table{font-size:.82rem}
   th,td{padding:.5rem .6rem}
   .card{padding:1.1rem 1.2rem}
-  .dates{flex-direction:column;align-items:center}
 }
+.dim{opacity:.5;pointer-events:none}
