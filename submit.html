@@ -34,16 +34,50 @@
       В паре: <code>Yegembayev_Karimov_TechStrategy_Presentation.pdf</code>
     </div>
 
-    <!-- Fillout embed -->
-    <div id="fillout-container">
-      <div style="width:100%;min-height:500px;" data-fillout-id="rH4F1JjML1us" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+    <!-- Group selector (shown if ?group= is missing from URL) -->
+    <div id="group-selector" style="display:none;text-align:center;padding:2rem 0;">
+      <h3 style="margin-bottom:1rem;">Выбери свою группу</h3>
+      <button type="button" onclick="selectGroup('almaty_emba26_may')" class="btn btn-primary" style="margin:.3rem;">Алматы (Май 2026)</button>
+      <button type="button" onclick="selectGroup('astana_emba26_may')" class="btn btn-primary" style="margin:.3rem;">Астана (Май 2026)</button>
+      <p id="task-hint" style="margin-top:1rem;font-size:.9rem;color:var(--text-3);"></p>
+    </div>
+
+    <!-- Fillout embed (shown only after group is in URL) -->
+    <div id="fillout-container" style="display:none;">
+      <div style="width:100%;min-height:500px;" data-fillout-id="8T2KNZXxAQus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
       <script src="https://server.fillout.com/embed/v1/"></script>
       <p style="margin-top:1rem;font-size:.85rem;color:var(--text-3);text-align:center;">
         Если форма не отображается:
-        <a href="https://forms.fillout.com/t/rH4F1JjML1us" target="_blank">открыть в новом окне</a>
+        <a id="fallback-link" href="https://iamai.fillout.com/t/8T2KNZXxAQus" target="_blank">открыть в новом окне</a>
         · Альтернатива: Telegram-группа курса.
       </p>
     </div>
+
+    <script>
+      (function(){
+        var params = new URLSearchParams(window.location.search);
+        // Default course
+        if (!params.has('course')) {
+          params.set('course', 'NARXOZ_IAMAI_2026');
+          history.replaceState(null, '', '?' + params.toString());
+        }
+        if (params.has('group')) {
+          document.getElementById('fillout-container').style.display = 'block';
+          var fb = document.getElementById('fallback-link');
+          if (fb) fb.href = 'https://iamai.fillout.com/t/8T2KNZXxAQus?' + params.toString();
+        } else {
+          document.getElementById('group-selector').style.display = 'block';
+          if (params.has('task')) {
+            document.getElementById('task-hint').textContent = 'Задание: ' + params.get('task');
+          }
+        }
+      })();
+      function selectGroup(g) {
+        var params = new URLSearchParams(window.location.search);
+        params.set('group', g);
+        window.location.search = params.toString();
+      }
+    </script>
 
     <div class="info tip" style="margin-top:2rem">
       <strong>Дубли:</strong> Можно отправить работу повторно — мы рассмотрим последнюю версию.
